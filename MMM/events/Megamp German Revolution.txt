@@ -5,77 +5,14 @@ country_event = {
     picture = "prussian_constitution"
 
     trigger = {
-        tag = PRU
-        
         OR = {
-            government = hms_government
-            government = absolute_monarchy 
-            government = prussian_constitutionalism 
-        }
-
-        OR = {
-            has_country_modifier = springtime_of_nations
-            has_country_flag = liberal_revolution_in_progress
-        }
-        OR = {
-            AND = {
-                average_militancy = 4
-                has_country_modifier = springtime_of_nations
-            }
-            AND = {
-                average_militancy = 6
-                NOT = { has_country_modifier = springtime_of_nations }
-            }
-            any_owned_province = {
-                is_capital = yes
-                controlled_by = REB
-            }
-            revolt_percentage = 0.50
-        }
+		tag = PRU
+		tag = NGF
+	    }
     }
 
     mean_time_to_happen =  {
         months = 1
-        modifier = {
-            factor = 0.5
-            has_country_modifier = springtime_of_nations
-        }
-        modifier = {
-            factor = 1.5
-            NOT = { has_country_modifier = springtime_of_nations }
-        }
-        modifier = {
-            factor = 0.1
-            capital_scope = { controlled_by = REB }
-        }
-        modifier = {
-            factor = 0.8
-            average_militancy = 6
-        }
-        modifier = {
-            factor = 0.8
-            average_militancy = 7
-        }
-        modifier = {
-            factor = 0.8
-            average_militancy = 8
-        }
-        modifier = {
-            factor = 0.8
-            average_militancy = 9
-        }
-        modifier = {
-            factor = 0.6
-            revolt_percentage = 0.60
-        }
-        modifier = {
-            factor = 0.6
-            revolt_percentage = 0.70
-        }
-        modifier = {
-            factor = 0.6
-            revolt_percentage = 0.80
-        }
     }
 
     immediate = {
@@ -271,3 +208,4 @@ country_event = {
         }
     }
 }
+
