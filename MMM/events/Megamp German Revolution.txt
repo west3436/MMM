@@ -5,6 +5,10 @@ country_event = {
     picture = "prussian_constitution"
 
     trigger = {
+    	NOT = {
+		has_global_flag = german_liberal_revolution
+	}
+	
         OR = {
 		tag = PRU
 		tag = NGF
@@ -20,6 +24,7 @@ country_event = {
         clr_country_flag = liberal_revolution_fired
         clr_country_flag = liberal_revolution_in_progress
         set_country_flag = had_liberal_revolution
+	set_global_flag = german_liberal_revolution
     }
 
     option = {
