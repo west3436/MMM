@@ -40,7 +40,7 @@ country_event = {
                 is_capital = yes
                 controlled_by_rebels = yes
             }
-            change_controller = PRU
+            change_controller = NGF
         }
 
         government = democracy
