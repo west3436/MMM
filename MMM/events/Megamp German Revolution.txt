@@ -205,7 +205,7 @@ country_event = {
             }
             ideology = { factor = 0.5 value = liberal }
         }
-        any_pop {
+        any_pop = {
             scaled_militancy = {
                 ideology = liberal
                 factor = 7

@@ -132,7 +132,7 @@ political_decisions = {
             }
             modifier = {
                 factor = 0
-                capital_scope = { continent = australia_new_zealand }
+                capital_scope = { continent = oceania }
                 NOT = { month = 8 }
             }
             modifier = {
