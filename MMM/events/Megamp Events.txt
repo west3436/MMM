@@ -656,5 +656,4 @@ country_event = {
 		}
 		THIS = { set_country_flag = japanese_enlightenment }
 		}
-	}
 }
