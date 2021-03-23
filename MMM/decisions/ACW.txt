@@ -120,7 +120,7 @@ manifest_destiny = {
         potential = {
             NOT = { has_country_flag = florida_purchase_started }
             NOT = { has_global_flag = florida_purchase_completed }
-            tag = SPA
+            tag = IBR
             year = 1860
             USA = { NOT = { war_with = MEX } }
         }
@@ -135,7 +135,6 @@ manifest_destiny = {
             prestige = 5
             any_country = {
                 limit = {
-                    NOT = { tag = SPA }
                     OR = {
 						tag = MEX
 						tag = USA
