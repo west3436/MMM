@@ -657,3 +657,123 @@ country_event = {
 		THIS = { set_country_flag = japanese_enlightenment }
 		}
 }
+
+country_event = {
+	id = 555556
+	title = "The French Revolution"
+	desc = "Angered by the recent defeat in a senseless war against Spain, the people of France have risen up and slain the king in an act of rebellion."
+	picture = "french_revolution_1848"
+
+	trigger = 
+	{
+		tag = FRA
+		year = 1869
+		war = no
+		has_recently_lost_war = yes
+		NOT = { has_country_flag = french_revolution }
+	}
+	
+	option = {
+		name = "Liberte, egalite, fraternite!"
+		set_country_flag = french_revolution 
+		government = democracy 
+		ruling_party_ideology = socialist 
+		prestige = -10
+		political_reform = universal_weighted_voting 
+        political_reform = gerrymandering
+        political_reform = yes_meeting
+        political_reform = free_press
+        political_reform = debtors_prisons 
+        political_reform = no_slavery 
+        political_reform = child_labor_restricted 
+
+        clr_country_flag = election_started
+        clr_country_flag = conservative_party_in_power
+        clr_country_flag = liberal_party_in_power
+        clr_country_flag = reactionary_party_in_power
+        set_country_flag = socialist_party_in_power
+        clr_country_flag = communist_party_in_power
+        clr_country_flag = fascist_party_in_power
+        clr_country_flag = anarcho_liberal_party_in_power
+		any_pop = {
+			ideology = {
+				value = socialist
+				factor = 0.3
+			}
+		}
+		any_country = {
+			limit = { NOT = {government = democracy} }
+			relation = {
+				who = FRA
+				value = -100
+			}
+		}
+		any_country = {
+			limit = { government = democracy }
+			relation = {
+				who = FRA
+				value = 100
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 555557
+	title = "The Communist Takeover"
+	desc = "The socialists that have long controlled the government have slowly been accumulating absolute power via reform. Marxism has fully taken root within France."
+	picture = "communist_congress"
+
+	trigger = 
+	{
+		tag = FRA
+		war = no
+		year = 1890
+		ideology = socialist
+		NOT = { has_country_flag = french_communism }
+	}
+	
+	option = {
+		name = "C'est la lutte finale!"
+		set_country_flag = french_communism 
+		government = proletarian_dictatorship  
+		ruling_party_ideology = communist
+		political_reform = none_voting
+        political_reform = underground_parties
+        political_reform = no_meeting
+        political_reform = state_press
+        political_reform = bankruptcy 
+        political_reform = no_slavery 
+        political_reform = child_labor_illegal 
+
+        clr_country_flag = election_started
+        clr_country_flag = conservative_party_in_power
+        clr_country_flag = liberal_party_in_power
+        clr_country_flag = reactionary_party_in_power
+        clr_country_flag = socialist_party_in_power
+        set_country_flag = communist_party_in_power
+        clr_country_flag = fascist_party_in_power
+        clr_country_flag = anarcho_liberal_party_in_power
+		
+		any_pop = {
+			ideology = {
+				value = communist
+				factor = 0.2
+			}
+		}
+		any_country = {
+			limit = { NOT = {government = proletarian_dictatorship} }
+			relation = {
+				who = FRA
+				value = -100
+			}
+		}
+		any_country = {
+			limit = { government = proletarian_dictatorship }
+			relation = {
+				who = FRA
+				value = 100
+			}
+		}
+	}
+}
