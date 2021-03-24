@@ -3210,7 +3210,10 @@ cut_down_to_size = {
                 }
                 THIS = {
                     civilized = yes
-                    NOT = { is_culture_group = east_asian }
+                    OR = {
+						NOT = { is_culture_group = east_asian }
+						tag = JAP
+					}
                     any_owned_province = { port = yes }
                 }
             }
@@ -8341,7 +8344,10 @@ treaty_port_casus_belli = {
                 }
                 THIS = {
                     civilized = yes
-                    NOT = { is_culture_group = east_asian }
+                    OR = {
+						NOT = { is_culture_group = east_asian }
+						tag = JAP
+					}
                     any_owned_province = { port = yes }
                 }
             }
